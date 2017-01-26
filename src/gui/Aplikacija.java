@@ -84,7 +84,7 @@ public class Aplikacija {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) throws MalformedURLException {  
-														////^zoki exception////
+						////^zoki exception////
 		
 		try {
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel");
@@ -103,7 +103,7 @@ public class Aplikacija {
 				}
 			}
 		});	
-		////zox1////
+		////z0x1////
 		
 		URL url = Aplikacija.class.getResource("/ikonice/Z0X1.gif");
 		Icon icon = new ImageIcon(url);
@@ -120,7 +120,7 @@ public class Aplikacija {
 		f.setVisible(true);
 		f.setAlwaysOnTop(true);
 		
-		/////zox1////
+		/////z0x1////
 	}
 
 
