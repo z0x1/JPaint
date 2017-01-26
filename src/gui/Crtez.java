@@ -110,12 +110,14 @@ public class Crtez extends JComponent {
 				else if(Aplikacija.staRadim == CrtOpcija.KANTICA) {
 					selektovanje(e.getX(), e.getY());
 					kantica();
+					deselekt();
 
 				}
 
 				else if(Aplikacija.staRadim == CrtOpcija.PIPETA) {
 					selektovanje(e.getX(), e.getY());
 					pipetica();
+					deselekt();
 
 				}
 
@@ -433,5 +435,10 @@ public class Crtez extends JComponent {
 			Aplikacija.getBtnBojaUnutrasnjosti().setBackground(Color.WHITE);
 		}
 
+	}
+	public void deselekt(){
+		lista.forEach((a) -> {
+			a.setSelektovan(false);
+		});
 	}
 }
