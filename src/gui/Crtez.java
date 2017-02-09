@@ -7,8 +7,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.util.ArrayList;
-import java.util.Random;
-import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -32,8 +30,6 @@ public class Crtez extends JComponent {
 
 	public ArrayList<Oblik> selektovani = new ArrayList<>();
 	private Oblik b;
-	private Graphics2D g;
-	private Pravougaonik ctk;
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public static void main(String[] args) {
