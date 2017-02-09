@@ -45,7 +45,7 @@ import java.awt.Toolkit;
 public class Aplikacija {
 
 	private JFrame frmPaint; 
-	public static String staRadim = DEFAULT;
+	public static String staRadim = "DEFAULT";
 	private static Color bojaUnutrasnjosti = Color.WHITE;                                   //new Color(255, 255, 255, 0);
 	private static Color bojaRama = Color.BLACK;
 	private JToggleButton tglbtnTacka;
@@ -475,73 +475,73 @@ public class Aplikacija {
 	private void akcije(){
 		tglbtnTacka.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				staRadim = CrtOpcija.TACKA;
+				staRadim = "TACKA";
 			}
 		});
 
 		tglbtnLinija.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				staRadim = CrtOpcija.LINIJA;
+				staRadim = "LINIJA";
 			}
 		});
 
 		tglbtnKvadrat.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				staRadim = CrtOpcija.KVADRAT;
+				staRadim = "KVADRAT";
 			}
 		});
 
 		tglbtnPravougaonik.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				staRadim = CrtOpcija.PRAVOUGAONIK;
+				staRadim = "PRAVOUGAONIK";
 			}
 		});
 
 		tglbtnKrug.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				staRadim = CrtOpcija.KRUG;
+				staRadim = "KRUG";
 			}
 		});
 
 		tglbtnObrisiSve.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				staRadim = CrtOpcija.OBRISI_SVE;
+				staRadim = "OBRISI_SVE";
 			}
 		});
 
 		tglbtnSelektuj.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				staRadim = CrtOpcija.SELEKTUJ;
+				staRadim = "SELEKTUJ";
 			}
 		});
 
 		tglbtnModifikuj.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				staRadim = CrtOpcija.MODIFIKUJ;
+				staRadim = "MODIFIKUJ";
 			}
 		});
 
 		tglbtnObrisi.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				staRadim = CrtOpcija.OBRISI;
+				staRadim = "OBRISI";
 			}
 		});
 
 		btnUndo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				staRadim = CrtOpcija.UNDO;
+				staRadim = "UNDO";
 			}
 		});
 
 		btnRedo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				staRadim = CrtOpcija.REDO;
+				staRadim = "REDO";
 			}
 		});
 
 		tglbtnPomeri.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				staRadim = CrtOpcija.POMERI;
+				staRadim = "POMERI";
 			}
 		});
 
@@ -565,42 +565,42 @@ public class Aplikacija {
 
 		tglbtnDragLinija.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				staRadim = CrtOpcija.DRGLINIJA;
+				staRadim = "DRGLINIJA";
 			}
 		});
 
 		tglbtnDragPravougaonik.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				staRadim = CrtOpcija.DRGPRAVOUGAONIK;
+				staRadim = "DRGPRAVOUGAONIK";
 			}
 		});
 
 		tglbtnDragKvadrat.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				staRadim = CrtOpcija.DRGKVADRAT;
+				staRadim = "DRGKVADRAT";
 			}
 		});
 
 		tglbtnDragkrug.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				staRadim = CrtOpcija.DRGKRUG;
+				staRadim = "DRGKRUG";
 			}
 		});
 		tglbtnCetka.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				staRadim = CrtOpcija.CETKA;
+				staRadim = "CETKA";
 			}
 		});
 
 		tglbtnKanticaBoje.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
-				staRadim = CrtOpcija.KANTICA;
+				staRadim = "KANTICA";
 			}
 		});
 
 		tglbtnPipeta.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
-				staRadim = CrtOpcija.PIPETA;
+				staRadim = "PIPETA";
 			}
 		});
 	}
