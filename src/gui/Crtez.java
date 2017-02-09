@@ -54,10 +54,10 @@ public class Crtez extends JComponent {
 				tY = e.getY();
 
 
-				if (Aplikacija.staRadim == CrtOpcija.TACKA) {
+				if (Aplikacija.staRadim == "TACKA") {
 					lista.add(new Tacka(e.getX(), e.getY(), Aplikacija.getBojaRama()));
 				} 
-				else if (Aplikacija.staRadim == CrtOpcija.LINIJA) {
+				else if (Aplikacija.staRadim == "LINIJA") {
 					if (linijaFlag == 0) {
 						xStart = e.getX();
 						yStart = e.getY();
@@ -68,7 +68,7 @@ public class Crtez extends JComponent {
 						linijaFlag = 0;
 					}
 				} 
-				else if (Aplikacija.staRadim == CrtOpcija.KVADRAT) {
+				else if (Aplikacija.staRadim == "KVADRAT") {
 					DlgKvadrat d1 = new DlgKvadrat();
 					d1.setVisible(true);
 					if (DlgKvadrat.isDaLiCrtati()) {
@@ -78,7 +78,7 @@ public class Crtez extends JComponent {
 						lista.add(kv1);
 					}
 				} 
-				else if (Aplikacija.staRadim == CrtOpcija.PRAVOUGAONIK) {
+				else if (Aplikacija.staRadim == "PRAVOUGAONIK") {
 					DlgPravougaonik d2 = new DlgPravougaonik();
 					d2.setVisible(true);
 					if (DlgPravougaonik.isDaLiCrtati()) {
@@ -89,7 +89,7 @@ public class Crtez extends JComponent {
 						lista.add(pr1);
 					}
 				} 
-				else if (Aplikacija.staRadim == CrtOpcija.KRUG) {
+				else if (Aplikacija.staRadim == "KRUG") {
 					DlgKrug d3 = new DlgKrug();
 					d3.setVisible(true);
 					if (DlgKrug.isDaLiCrtati()) {
@@ -99,22 +99,22 @@ public class Crtez extends JComponent {
 						lista.add(kr1);
 					}
 				} 
-				else if (Aplikacija.staRadim == CrtOpcija.SELEKTUJ) {
+				else if (Aplikacija.staRadim == "SELEKTUJ") {
 					selektovanje(e.getX(), e.getY());
 				} 
-				else if(Aplikacija.staRadim == CrtOpcija.MODIFIKUJ) {
+				else if(Aplikacija.staRadim == "MODIFIKUJ") {
 					//selektovanje(e.getX(), e.getY());
 					modifikacija();
 				}
 
-				else if(Aplikacija.staRadim == CrtOpcija.KANTICA) {
+				else if(Aplikacija.staRadim == "KANTICA") {
 					selektovanje(e.getX(), e.getY());
 					kantica();
 					deselekt();
 
 				}
 
-				else if(Aplikacija.staRadim == CrtOpcija.PIPETA) {
+				else if(Aplikacija.staRadim == "PIPETA") {
 					selektovanje(e.getX(), e.getY());
 					pipetica();
 					deselekt();
@@ -135,10 +135,10 @@ public class Crtez extends JComponent {
 				Aplikacija.getLblPozKurosoraY().setText("Y:" +(int)e.getY());
 
 
-				if (Aplikacija.staRadim == CrtOpcija.POMERI) {
+				if (Aplikacija.staRadim == "POMERI") {
 					pomeranje(e.getX(), e.getY());
 				}
-				else if (Aplikacija.staRadim == CrtOpcija.DRGKVADRAT) {
+				else if (Aplikacija.staRadim == "DRGKVADRAT") {
 
 					Kvadrat kvd = new Kvadrat(new Tacka(tX, tY), Math.abs(Math.max(tX - e.getX(), tY - e.getY())),
 							Aplikacija.getBojaRama());
@@ -156,7 +156,7 @@ public class Crtez extends JComponent {
 
 				}
 
-				else if (Aplikacija.staRadim == CrtOpcija.DRGPRAVOUGAONIK) {
+				else if (Aplikacija.staRadim == "DRGPRAVOUGAONIK") {
 
 					Pravougaonik pd = new Pravougaonik(new Tacka(tX, tY), Math.abs(tX - e.getX()),
 							Math.abs(tY - e.getY()), Aplikacija.getBojaRama());
@@ -172,7 +172,7 @@ public class Crtez extends JComponent {
 					//}
 					lista.add(pd);
 				} 
-				else if (Aplikacija.staRadim == CrtOpcija.DRGKRUG) {
+				else if (Aplikacija.staRadim == "DRGKRUG") {
 
 					Krug kgd = new Krug(new Tacka(tX, tY), Math.min(Math.abs(tX - e.getX()), Math.abs(tY - e.getY())),
 							Aplikacija.getBojaRama());
@@ -188,7 +188,7 @@ public class Crtez extends JComponent {
 					//}
 					lista.add(kgd);
 				}
-				else if(Aplikacija.staRadim == CrtOpcija.CETKA){
+				else if(Aplikacija.staRadim == "CETKA"){
 
 					Linija cetka = new Linija(new Tacka(tX,tY),new Tacka(e.getX(),e.getY()), Aplikacija.getBojaRama());
 					tX=e.getX();
@@ -197,7 +197,7 @@ public class Crtez extends JComponent {
 
 				}
 
-				else if(Aplikacija.staRadim == CrtOpcija.DRGLINIJA){
+				else if(Aplikacija.staRadim == "DRGLINIJA"){
 					Linija ldrg = new Linija(new Tacka(tX, tY), new Tacka(e.getX(), e.getY()), Aplikacija.getBojaRama());
 					if (stanjeDrag == true) {
 						lista.remove(lista.size() - 1);
@@ -240,31 +240,31 @@ public class Crtez extends JComponent {
 		
 		
 
-		if (Aplikacija.staRadim == CrtOpcija.OBRISI_SVE) {
+		if (Aplikacija.staRadim == "OBRISI_SVE") {
 			lista.clear();
-			Aplikacija.staRadim = CrtOpcija.DEFAULT;
+			Aplikacija.staRadim = "DEFAULT";
 		}
 
-		if(Aplikacija.staRadim == CrtOpcija.OBRISI)
+		if(Aplikacija.staRadim == "OBRISI")
 		{
 			brisanje();
 		}
 
 
-		if (Aplikacija.staRadim == CrtOpcija.UNDO) {
+		if (Aplikacija.staRadim == "UNDO") {
 			if (!lista.isEmpty()) {
 				listaUndo.add(lista.get(lista.size() - 1));
 				lista.remove(lista.size() - 1);
 			}
-			Aplikacija.staRadim = CrtOpcija.DEFAULT;
+			Aplikacija.staRadim = "DEFAULT";
 		}
-		if (Aplikacija.staRadim == CrtOpcija.REDO) {
+		if (Aplikacija.staRadim == "REDO") {
 			if (!listaUndo.isEmpty()) {
 				lista.add(listaUndo.get(listaUndo.size() - 1));
 				listaUndo.remove(listaUndo.size() - 1);
 			}
 
-			Aplikacija.staRadim = CrtOpcija.DEFAULT;
+			Aplikacija.staRadim = "DEFAULT";
 		}
 
 		lista.forEach((a) -> {
@@ -346,7 +346,7 @@ public class Crtez extends JComponent {
 					dt.izmeni(b);
 				}
 			}
-			Aplikacija.staRadim = CrtOpcija.DEFAULT;
+			Aplikacija.staRadim = "DEFAULT";
 		}
 	}
 	public void brisanje(){
@@ -360,7 +360,7 @@ public class Crtez extends JComponent {
 			lista.remove(lista.get(temp));
 			selektovani.clear();
 
-			Aplikacija.staRadim = CrtOpcija.DEFAULT;
+			Aplikacija.staRadim = "DEFAULT";
 		} 
 	}
 
