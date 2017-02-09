@@ -45,7 +45,7 @@ import java.awt.Toolkit;
 public class Aplikacija {
 
 	private JFrame frmPaint; 
-	public static CrtOpcija staRadim;
+	public static String staRadim = DEFAULT;
 	private static Color bojaUnutrasnjosti = Color.WHITE;                                   //new Color(255, 255, 255, 0);
 	private static Color bojaRama = Color.BLACK;
 	private JToggleButton tglbtnTacka;
